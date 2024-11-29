@@ -1,6 +1,105 @@
-<html><head><title>Plots</title></head><body>
+<html><head><title>Plots</title>
+
+    <style>
+    /* Style the tab */
+    .tab {
+      overflow: hidden;
+      border-bottom: 1px solid #ccc;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 10px 12px;
+      transition: 0.3s;
+      font-size: 16px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 10px 0;
+    }
+
+    /* Style for tables */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      text-align: center;
+      padding: 8px;
+    }
+
+    /* Style for DM Legend */
+    .dm-legend {
+      text-align: left;
+      margin-top: 10px;
+    }
+    .dm-legend ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .dm-legend li {
+      margin: 2px 0;
+    }
+
+    </style>
+    </head><body>
+    
+    <script>
+    function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+
+      // Hide all tab contents
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Remove 'active' class from all tab links
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the selected tab content and add 'active' class to the clicked tab
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    // Automatically click the first tab to display it on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('.tablinks').click();
+    });
+    </script>
+    
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'DMPlots')">DM Plots</button>
+      <button class="tablinks" onclick="openTab(event, 'RedundancyAnalysis')">Redundancy Analysis</button>
+    </div>
+    <div id="DMPlots" class="tabcontent">
 <h1>QualityControlBasic</h1>
-<table border="1" cellspacing="0" cellpadding="5">
+<table>
 <tr><th>Game Mode</th><th>User 1SP1001</th><th>User 1SP1002</th><th>User 1SP1003</th><th>User 1SP1004</th><th>User 1SP1005</th><th>User 1SP1006</th><th>User 1SP1007</th><th>User 1SP1008</th><th>User 1SP1009</th><th>User 1SP1010</th><th>User 1SP1011</th><th>User 1SP1012</th><th>User 1SP1013</th><th>User 1SP1014</th><th>User 1SP1015</th><th>User 1SP1016</th><th>User 1SP1017</th><th>User 1SP1018</th><th>User 2SP1001</th><th>User 2SP1002</th><th>User 2SP1003</th><th>User 2SP1004</th><th>User 2SP1005</th><th>User 2SP1006</th><th>User 2SP1007</th><th>User 2SP1008</th><th>User 2SP1009</th><th>User 2SP1010</th><th>User 2SP1011</th><th>User 2SP1012</th><th>User 2SP1013</th><th>User 2SP1014</th><th>User 2SP1015</th><th>User 2SP1016</th><th>User 3SP1001</th><th>User 3SP1002</th><th>User 3SP1003</th><th>User 3SP1004</th><th>User 3SP1005</th><th>User 3SP1006</th><th>User 3SP1007</th><th>User 3SP1008</th><th>User 3SP1009</th><th>User 3SP1010</th><th>User 3SP1011</th><th>User 3SP1012</th><th>User 3SP1013</th><th>User 3SP1014</th><th>User 3SP1015</th><th>User 3SP1016</th><th>User 3SP1017</th><th>User 3SP1018</th><th>User 3SP1019</th><th>User 4SP1001</th><th>User 4SP1002</th></tr>
 <tr><td>STANDARD</td>
 <td><img src="plots/QualityControlBasic_STANDARD_1SP1001.png" alt="User 1SP1001" width="200"></td>
@@ -61,7 +160,7 @@
 </tr>
 </table>
 <h1>ConstellationsBasic</h1>
-<table border="1" cellspacing="0" cellpadding="5">
+<table>
 <tr><th>Game Mode</th><th>User 1SP1001</th><th>User 1SP1002</th><th>User 1SP1003</th><th>User 1SP1004</th><th>User 1SP1005</th><th>User 1SP1006</th><th>User 1SP1007</th><th>User 1SP1008</th><th>User 1SP1009</th><th>User 1SP1010</th><th>User 1SP1011</th><th>User 1SP1012</th><th>User 1SP1013</th><th>User 1SP1014</th><th>User 1SP1015</th><th>User 1SP1016</th><th>User 1SP1017</th><th>User 1SP1018</th><th>User 2SP1001</th><th>User 2SP1002</th><th>User 2SP1003</th><th>User 2SP1004</th><th>User 2SP1005</th><th>User 2SP1006</th><th>User 2SP1007</th><th>User 2SP1008</th><th>User 2SP1009</th><th>User 2SP1010</th><th>User 2SP1011</th><th>User 2SP1012</th><th>User 2SP1013</th><th>User 2SP1014</th><th>User 2SP1015</th><th>User 2SP1016</th><th>User 3SP1001</th><th>User 3SP1002</th><th>User 3SP1003</th><th>User 3SP1004</th><th>User 3SP1005</th><th>User 3SP1006</th><th>User 3SP1007</th><th>User 3SP1008</th><th>User 3SP1009</th><th>User 3SP1010</th><th>User 3SP1011</th><th>User 3SP1012</th><th>User 3SP1013</th><th>User 3SP1014</th><th>User 3SP1015</th><th>User 3SP1016</th><th>User 3SP1017</th><th>User 3SP1018</th><th>User 3SP1019</th><th>User 4SP1001</th><th>User 4SP1002</th></tr>
 <tr><td>STANDARD</td>
 <td><img src="plots/ConstellationsBasic_STANDARD_1SP1001.png" alt="User 1SP1001" width="200"></td>
@@ -122,7 +221,7 @@
 </tr>
 </table>
 <h1>Circle horizontal activity</h1>
-<table border="1" cellspacing="0" cellpadding="5">
+<table>
 <tr><th>Game Mode</th><th>User 1SP1001</th><th>User 1SP1002</th><th>User 1SP1003</th><th>User 1SP1004</th><th>User 1SP1005</th><th>User 1SP1006</th><th>User 1SP1007</th><th>User 1SP1008</th><th>User 1SP1009</th><th>User 1SP1010</th><th>User 1SP1011</th><th>User 1SP1012</th><th>User 1SP1013</th><th>User 1SP1014</th><th>User 1SP1015</th><th>User 1SP1016</th><th>User 1SP1017</th><th>User 1SP1018</th><th>User 2SP1001</th><th>User 2SP1002</th><th>User 2SP1003</th><th>User 2SP1004</th><th>User 2SP1005</th><th>User 2SP1006</th><th>User 2SP1007</th><th>User 2SP1008</th><th>User 2SP1009</th><th>User 2SP1010</th><th>User 2SP1011</th><th>User 2SP1012</th><th>User 2SP1013</th><th>User 2SP1014</th><th>User 2SP1015</th><th>User 2SP1016</th><th>User 3SP1001</th><th>User 3SP1002</th><th>User 3SP1003</th><th>User 3SP1004</th><th>User 3SP1005</th><th>User 3SP1006</th><th>User 3SP1007</th><th>User 3SP1008</th><th>User 3SP1009</th><th>User 3SP1010</th><th>User 3SP1011</th><th>User 3SP1012</th><th>User 3SP1013</th><th>User 3SP1014</th><th>User 3SP1015</th><th>User 3SP1016</th><th>User 3SP1017</th><th>User 3SP1018</th><th>User 3SP1019</th><th>User 4SP1001</th><th>User 4SP1002</th></tr>
 <tr><td>STANDARD</td>
 <td><img src="plots/Circle_horizontal_activity_STANDARD_1SP1001.png" alt="User 1SP1001" width="200"></td>
@@ -183,7 +282,7 @@
 </tr>
 </table>
 <h1>Circle activity</h1>
-<table border="1" cellspacing="0" cellpadding="5">
+<table>
 <tr><th>Game Mode</th><th>User 1SP1001</th><th>User 1SP1002</th><th>User 1SP1003</th><th>User 1SP1004</th><th>User 1SP1005</th><th>User 1SP1006</th><th>User 1SP1007</th><th>User 1SP1008</th><th>User 1SP1009</th><th>User 1SP1010</th><th>User 1SP1011</th><th>User 1SP1012</th><th>User 1SP1013</th><th>User 1SP1014</th><th>User 1SP1015</th><th>User 1SP1016</th><th>User 1SP1017</th><th>User 1SP1018</th><th>User 2SP1001</th><th>User 2SP1002</th><th>User 2SP1003</th><th>User 2SP1004</th><th>User 2SP1005</th><th>User 2SP1006</th><th>User 2SP1007</th><th>User 2SP1008</th><th>User 2SP1009</th><th>User 2SP1010</th><th>User 2SP1011</th><th>User 2SP1012</th><th>User 2SP1013</th><th>User 2SP1014</th><th>User 2SP1015</th><th>User 2SP1016</th><th>User 3SP1001</th><th>User 3SP1002</th><th>User 3SP1003</th><th>User 3SP1004</th><th>User 3SP1005</th><th>User 3SP1006</th><th>User 3SP1007</th><th>User 3SP1008</th><th>User 3SP1009</th><th>User 3SP1010</th><th>User 3SP1011</th><th>User 3SP1012</th><th>User 3SP1013</th><th>User 3SP1014</th><th>User 3SP1015</th><th>User 3SP1016</th><th>User 3SP1017</th><th>User 3SP1018</th><th>User 3SP1019</th><th>User 4SP1001</th><th>User 4SP1002</th></tr>
 <tr><td>STANDARD</td>
 <td><img src="plots/Circle_activity_STANDARD_1SP1001.png" alt="User 1SP1001" width="200"></td>
@@ -244,304 +343,304 @@
 </tr>
 </table>
 <h1>Guess what?</h1>
-<table border="1" cellspacing="0" cellpadding="5">
+<table>
 <tr><th>Game Mode</th><th>User 1SP1001</th><th>User 1SP1002</th><th>User 1SP1003</th><th>User 1SP1004</th><th>User 1SP1005</th><th>User 1SP1006</th><th>User 1SP1007</th><th>User 1SP1008</th><th>User 1SP1009</th><th>User 1SP1010</th><th>User 1SP1011</th><th>User 1SP1012</th><th>User 1SP1013</th><th>User 1SP1014</th><th>User 1SP1015</th><th>User 1SP1016</th><th>User 1SP1017</th><th>User 1SP1018</th><th>User 2SP1001</th><th>User 2SP1002</th><th>User 2SP1003</th><th>User 2SP1004</th><th>User 2SP1005</th><th>User 2SP1006</th><th>User 2SP1007</th><th>User 2SP1008</th><th>User 2SP1009</th><th>User 2SP1010</th><th>User 2SP1011</th><th>User 2SP1012</th><th>User 2SP1013</th><th>User 2SP1014</th><th>User 2SP1015</th><th>User 2SP1016</th><th>User 3SP1001</th><th>User 3SP1002</th><th>User 3SP1003</th><th>User 3SP1004</th><th>User 3SP1005</th><th>User 3SP1006</th><th>User 3SP1007</th><th>User 3SP1008</th><th>User 3SP1009</th><th>User 3SP1010</th><th>User 3SP1011</th><th>User 3SP1012</th><th>User 3SP1013</th><th>User 3SP1014</th><th>User 3SP1015</th><th>User 3SP1016</th><th>User 3SP1017</th><th>User 3SP1018</th><th>User 3SP1019</th><th>User 4SP1001</th><th>User 4SP1002</th></tr>
 <tr><td>DIRECT</td>
-<td><img src="plots/Guess_what_DIRECT_1SP1001.png" alt="User 1SP1001" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_1SP1002.png" alt="User 1SP1002" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_1SP1003.png" alt="User 1SP1003" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_1SP1004.png" alt="User 1SP1004" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_1SP1005.png" alt="User 1SP1005" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_1SP1006.png" alt="User 1SP1006" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_1SP1007.png" alt="User 1SP1007" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_1SP1001.png" alt="User 1SP1001" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_1SP1002.png" alt="User 1SP1002" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_1SP1003.png" alt="User 1SP1003" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_1SP1004.png" alt="User 1SP1004" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_1SP1005.png" alt="User 1SP1005" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_1SP1006.png" alt="User 1SP1006" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_1SP1007.png" alt="User 1SP1007" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_DIRECT_1SP1009.png" alt="User 1SP1009" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_1SP1010.png" alt="User 1SP1010" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_1SP1011.png" alt="User 1SP1011" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_1SP1012.png" alt="User 1SP1012" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_1SP1013.png" alt="User 1SP1013" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_1SP1014.png" alt="User 1SP1014" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_1SP1015.png" alt="User 1SP1015" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_1SP1016.png" alt="User 1SP1016" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_1SP1017.png" alt="User 1SP1017" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_1SP1018.png" alt="User 1SP1018" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_2SP1001.png" alt="User 2SP1001" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_1SP1009.png" alt="User 1SP1009" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_1SP1010.png" alt="User 1SP1010" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_1SP1011.png" alt="User 1SP1011" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_1SP1012.png" alt="User 1SP1012" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_1SP1013.png" alt="User 1SP1013" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_1SP1014.png" alt="User 1SP1014" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_1SP1015.png" alt="User 1SP1015" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_1SP1016.png" alt="User 1SP1016" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_1SP1017.png" alt="User 1SP1017" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_1SP1018.png" alt="User 1SP1018" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_2SP1001.png" alt="User 2SP1001" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_DIRECT_2SP1003.png" alt="User 2SP1003" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_2SP1004.png" alt="User 2SP1004" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_2SP1005.png" alt="User 2SP1005" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_2SP1006.png" alt="User 2SP1006" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_2SP1003.png" alt="User 2SP1003" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_2SP1004.png" alt="User 2SP1004" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_2SP1005.png" alt="User 2SP1005" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_2SP1006.png" alt="User 2SP1006" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_DIRECT_2SP1008.png" alt="User 2SP1008" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_2SP1008.png" alt="User 2SP1008" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_DIRECT_2SP1010.png" alt="User 2SP1010" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_2SP1011.png" alt="User 2SP1011" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_2SP1012.png" alt="User 2SP1012" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_2SP1013.png" alt="User 2SP1013" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_2SP1014.png" alt="User 2SP1014" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_2SP1015.png" alt="User 2SP1015" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_2SP1010.png" alt="User 2SP1010" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_2SP1011.png" alt="User 2SP1011" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_2SP1012.png" alt="User 2SP1012" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_2SP1013.png" alt="User 2SP1013" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_2SP1014.png" alt="User 2SP1014" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_2SP1015.png" alt="User 2SP1015" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_DIRECT_3SP1001.png" alt="User 3SP1001" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_3SP1002.png" alt="User 3SP1002" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_3SP1003.png" alt="User 3SP1003" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_3SP1004.png" alt="User 3SP1004" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_3SP1005.png" alt="User 3SP1005" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_3SP1006.png" alt="User 3SP1006" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_3SP1007.png" alt="User 3SP1007" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_3SP1008.png" alt="User 3SP1008" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_3SP1009.png" alt="User 3SP1009" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_3SP1010.png" alt="User 3SP1010" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_3SP1011.png" alt="User 3SP1011" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_3SP1012.png" alt="User 3SP1012" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_3SP1013.png" alt="User 3SP1013" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_3SP1014.png" alt="User 3SP1014" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_3SP1015.png" alt="User 3SP1015" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_3SP1016.png" alt="User 3SP1016" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_3SP1017.png" alt="User 3SP1017" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_3SP1018.png" alt="User 3SP1018" width="200"></td>
-<td><img src="plots/Guess_what_DIRECT_3SP1019.png" alt="User 3SP1019" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_3SP1001.png" alt="User 3SP1001" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_3SP1002.png" alt="User 3SP1002" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_3SP1003.png" alt="User 3SP1003" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_3SP1004.png" alt="User 3SP1004" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_3SP1005.png" alt="User 3SP1005" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_3SP1006.png" alt="User 3SP1006" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_3SP1007.png" alt="User 3SP1007" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_3SP1008.png" alt="User 3SP1008" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_3SP1009.png" alt="User 3SP1009" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_3SP1010.png" alt="User 3SP1010" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_3SP1011.png" alt="User 3SP1011" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_3SP1012.png" alt="User 3SP1012" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_3SP1013.png" alt="User 3SP1013" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_3SP1014.png" alt="User 3SP1014" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_3SP1015.png" alt="User 3SP1015" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_3SP1016.png" alt="User 3SP1016" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_3SP1017.png" alt="User 3SP1017" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_3SP1018.png" alt="User 3SP1018" width="200"></td>
+<td><img src="plots/Guess_what__DIRECT_3SP1019.png" alt="User 3SP1019" width="200"></td>
 <td>No Data</td>
 <td>No Data</td>
 </tr>
 <tr><td>YES_NO</td>
-<td><img src="plots/Guess_what_YES_NO_1SP1001.png" alt="User 1SP1001" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_1SP1002.png" alt="User 1SP1002" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_1SP1003.png" alt="User 1SP1003" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_1SP1004.png" alt="User 1SP1004" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_1SP1005.png" alt="User 1SP1005" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_1SP1006.png" alt="User 1SP1006" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_1SP1007.png" alt="User 1SP1007" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_1SP1008.png" alt="User 1SP1008" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_1SP1009.png" alt="User 1SP1009" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_1SP1010.png" alt="User 1SP1010" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_1SP1011.png" alt="User 1SP1011" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_1SP1012.png" alt="User 1SP1012" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_1SP1013.png" alt="User 1SP1013" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_1SP1014.png" alt="User 1SP1014" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_1SP1015.png" alt="User 1SP1015" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_1SP1016.png" alt="User 1SP1016" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_1SP1017.png" alt="User 1SP1017" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_1SP1018.png" alt="User 1SP1018" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_2SP1001.png" alt="User 2SP1001" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_1SP1001.png" alt="User 1SP1001" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_1SP1002.png" alt="User 1SP1002" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_1SP1003.png" alt="User 1SP1003" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_1SP1004.png" alt="User 1SP1004" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_1SP1005.png" alt="User 1SP1005" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_1SP1006.png" alt="User 1SP1006" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_1SP1007.png" alt="User 1SP1007" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_1SP1008.png" alt="User 1SP1008" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_1SP1009.png" alt="User 1SP1009" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_1SP1010.png" alt="User 1SP1010" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_1SP1011.png" alt="User 1SP1011" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_1SP1012.png" alt="User 1SP1012" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_1SP1013.png" alt="User 1SP1013" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_1SP1014.png" alt="User 1SP1014" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_1SP1015.png" alt="User 1SP1015" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_1SP1016.png" alt="User 1SP1016" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_1SP1017.png" alt="User 1SP1017" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_1SP1018.png" alt="User 1SP1018" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_2SP1001.png" alt="User 2SP1001" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_YES_NO_2SP1003.png" alt="User 2SP1003" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_2SP1004.png" alt="User 2SP1004" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_2SP1005.png" alt="User 2SP1005" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_2SP1006.png" alt="User 2SP1006" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_2SP1003.png" alt="User 2SP1003" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_2SP1004.png" alt="User 2SP1004" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_2SP1005.png" alt="User 2SP1005" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_2SP1006.png" alt="User 2SP1006" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_YES_NO_2SP1008.png" alt="User 2SP1008" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_2SP1008.png" alt="User 2SP1008" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_YES_NO_2SP1010.png" alt="User 2SP1010" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_2SP1011.png" alt="User 2SP1011" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_2SP1012.png" alt="User 2SP1012" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_2SP1013.png" alt="User 2SP1013" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_2SP1014.png" alt="User 2SP1014" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_2SP1015.png" alt="User 2SP1015" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_2SP1010.png" alt="User 2SP1010" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_2SP1011.png" alt="User 2SP1011" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_2SP1012.png" alt="User 2SP1012" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_2SP1013.png" alt="User 2SP1013" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_2SP1014.png" alt="User 2SP1014" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_2SP1015.png" alt="User 2SP1015" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_YES_NO_3SP1001.png" alt="User 3SP1001" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_3SP1002.png" alt="User 3SP1002" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_3SP1003.png" alt="User 3SP1003" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_3SP1001.png" alt="User 3SP1001" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_3SP1002.png" alt="User 3SP1002" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_3SP1003.png" alt="User 3SP1003" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_YES_NO_3SP1005.png" alt="User 3SP1005" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_3SP1006.png" alt="User 3SP1006" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_3SP1007.png" alt="User 3SP1007" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_3SP1008.png" alt="User 3SP1008" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_3SP1009.png" alt="User 3SP1009" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_3SP1010.png" alt="User 3SP1010" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_3SP1011.png" alt="User 3SP1011" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_3SP1012.png" alt="User 3SP1012" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_3SP1013.png" alt="User 3SP1013" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_3SP1014.png" alt="User 3SP1014" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_3SP1015.png" alt="User 3SP1015" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_3SP1016.png" alt="User 3SP1016" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_3SP1017.png" alt="User 3SP1017" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_3SP1018.png" alt="User 3SP1018" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_3SP1019.png" alt="User 3SP1019" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_3SP1005.png" alt="User 3SP1005" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_3SP1006.png" alt="User 3SP1006" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_3SP1007.png" alt="User 3SP1007" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_3SP1008.png" alt="User 3SP1008" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_3SP1009.png" alt="User 3SP1009" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_3SP1010.png" alt="User 3SP1010" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_3SP1011.png" alt="User 3SP1011" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_3SP1012.png" alt="User 3SP1012" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_3SP1013.png" alt="User 3SP1013" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_3SP1014.png" alt="User 3SP1014" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_3SP1015.png" alt="User 3SP1015" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_3SP1016.png" alt="User 3SP1016" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_3SP1017.png" alt="User 3SP1017" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_3SP1018.png" alt="User 3SP1018" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_3SP1019.png" alt="User 3SP1019" width="200"></td>
 <td>No Data</td>
 <td>No Data</td>
 </tr>
 <tr><td>YES_NO_ACTION</td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_1SP1001.png" alt="User 1SP1001" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_1SP1002.png" alt="User 1SP1002" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_1SP1003.png" alt="User 1SP1003" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_1SP1004.png" alt="User 1SP1004" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_1SP1005.png" alt="User 1SP1005" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_1SP1006.png" alt="User 1SP1006" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_1SP1007.png" alt="User 1SP1007" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_1SP1008.png" alt="User 1SP1008" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_1SP1009.png" alt="User 1SP1009" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_1SP1010.png" alt="User 1SP1010" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_1SP1011.png" alt="User 1SP1011" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_1SP1012.png" alt="User 1SP1012" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_1SP1013.png" alt="User 1SP1013" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_1SP1014.png" alt="User 1SP1014" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_1SP1015.png" alt="User 1SP1015" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_1SP1016.png" alt="User 1SP1016" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_1SP1017.png" alt="User 1SP1017" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_1SP1018.png" alt="User 1SP1018" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_2SP1001.png" alt="User 2SP1001" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_1SP1001.png" alt="User 1SP1001" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_1SP1002.png" alt="User 1SP1002" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_1SP1003.png" alt="User 1SP1003" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_1SP1004.png" alt="User 1SP1004" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_1SP1005.png" alt="User 1SP1005" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_1SP1006.png" alt="User 1SP1006" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_1SP1007.png" alt="User 1SP1007" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_1SP1008.png" alt="User 1SP1008" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_1SP1009.png" alt="User 1SP1009" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_1SP1010.png" alt="User 1SP1010" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_1SP1011.png" alt="User 1SP1011" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_1SP1012.png" alt="User 1SP1012" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_1SP1013.png" alt="User 1SP1013" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_1SP1014.png" alt="User 1SP1014" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_1SP1015.png" alt="User 1SP1015" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_1SP1016.png" alt="User 1SP1016" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_1SP1017.png" alt="User 1SP1017" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_1SP1018.png" alt="User 1SP1018" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_2SP1001.png" alt="User 2SP1001" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_2SP1003.png" alt="User 2SP1003" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_2SP1004.png" alt="User 2SP1004" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_2SP1005.png" alt="User 2SP1005" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_2SP1006.png" alt="User 2SP1006" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_2SP1003.png" alt="User 2SP1003" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_2SP1004.png" alt="User 2SP1004" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_2SP1005.png" alt="User 2SP1005" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_2SP1006.png" alt="User 2SP1006" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_2SP1008.png" alt="User 2SP1008" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_2SP1008.png" alt="User 2SP1008" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_2SP1010.png" alt="User 2SP1010" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_2SP1011.png" alt="User 2SP1011" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_2SP1012.png" alt="User 2SP1012" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_2SP1013.png" alt="User 2SP1013" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_2SP1014.png" alt="User 2SP1014" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_2SP1015.png" alt="User 2SP1015" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_2SP1010.png" alt="User 2SP1010" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_2SP1011.png" alt="User 2SP1011" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_2SP1012.png" alt="User 2SP1012" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_2SP1013.png" alt="User 2SP1013" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_2SP1014.png" alt="User 2SP1014" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_2SP1015.png" alt="User 2SP1015" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_3SP1001.png" alt="User 3SP1001" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_3SP1002.png" alt="User 3SP1002" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_3SP1003.png" alt="User 3SP1003" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_3SP1001.png" alt="User 3SP1001" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_3SP1002.png" alt="User 3SP1002" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_3SP1003.png" alt="User 3SP1003" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_3SP1005.png" alt="User 3SP1005" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_3SP1006.png" alt="User 3SP1006" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_3SP1007.png" alt="User 3SP1007" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_3SP1008.png" alt="User 3SP1008" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_3SP1009.png" alt="User 3SP1009" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_3SP1010.png" alt="User 3SP1010" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_3SP1011.png" alt="User 3SP1011" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_3SP1012.png" alt="User 3SP1012" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_3SP1013.png" alt="User 3SP1013" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_3SP1014.png" alt="User 3SP1014" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_3SP1015.png" alt="User 3SP1015" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_3SP1016.png" alt="User 3SP1016" width="200"></td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_3SP1017.png" alt="User 3SP1017" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_3SP1005.png" alt="User 3SP1005" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_3SP1006.png" alt="User 3SP1006" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_3SP1007.png" alt="User 3SP1007" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_3SP1008.png" alt="User 3SP1008" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_3SP1009.png" alt="User 3SP1009" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_3SP1010.png" alt="User 3SP1010" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_3SP1011.png" alt="User 3SP1011" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_3SP1012.png" alt="User 3SP1012" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_3SP1013.png" alt="User 3SP1013" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_3SP1014.png" alt="User 3SP1014" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_3SP1015.png" alt="User 3SP1015" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_3SP1016.png" alt="User 3SP1016" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_3SP1017.png" alt="User 3SP1017" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_YES_NO_ACTION_3SP1019.png" alt="User 3SP1019" width="200"></td>
+<td><img src="plots/Guess_what__YES_NO_ACTION_3SP1019.png" alt="User 3SP1019" width="200"></td>
 <td>No Data</td>
 <td>No Data</td>
 </tr>
 <tr><td>HANGMAN</td>
-<td><img src="plots/Guess_what_HANGMAN_1SP1001.png" alt="User 1SP1001" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_1SP1002.png" alt="User 1SP1002" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_1SP1003.png" alt="User 1SP1003" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_1SP1004.png" alt="User 1SP1004" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_1SP1005.png" alt="User 1SP1005" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_1SP1006.png" alt="User 1SP1006" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_1SP1007.png" alt="User 1SP1007" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_1SP1001.png" alt="User 1SP1001" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_1SP1002.png" alt="User 1SP1002" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_1SP1003.png" alt="User 1SP1003" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_1SP1004.png" alt="User 1SP1004" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_1SP1005.png" alt="User 1SP1005" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_1SP1006.png" alt="User 1SP1006" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_1SP1007.png" alt="User 1SP1007" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_HANGMAN_1SP1009.png" alt="User 1SP1009" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_1SP1010.png" alt="User 1SP1010" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_1SP1011.png" alt="User 1SP1011" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_1SP1012.png" alt="User 1SP1012" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_1SP1013.png" alt="User 1SP1013" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_1SP1014.png" alt="User 1SP1014" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_1SP1015.png" alt="User 1SP1015" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_1SP1016.png" alt="User 1SP1016" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_1SP1017.png" alt="User 1SP1017" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_1SP1018.png" alt="User 1SP1018" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_2SP1001.png" alt="User 2SP1001" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_1SP1009.png" alt="User 1SP1009" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_1SP1010.png" alt="User 1SP1010" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_1SP1011.png" alt="User 1SP1011" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_1SP1012.png" alt="User 1SP1012" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_1SP1013.png" alt="User 1SP1013" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_1SP1014.png" alt="User 1SP1014" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_1SP1015.png" alt="User 1SP1015" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_1SP1016.png" alt="User 1SP1016" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_1SP1017.png" alt="User 1SP1017" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_1SP1018.png" alt="User 1SP1018" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_2SP1001.png" alt="User 2SP1001" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_HANGMAN_2SP1003.png" alt="User 2SP1003" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_2SP1004.png" alt="User 2SP1004" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_2SP1005.png" alt="User 2SP1005" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_2SP1006.png" alt="User 2SP1006" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_2SP1003.png" alt="User 2SP1003" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_2SP1004.png" alt="User 2SP1004" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_2SP1005.png" alt="User 2SP1005" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_2SP1006.png" alt="User 2SP1006" width="200"></td>
 <td>No Data</td>
 <td>No Data</td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_HANGMAN_2SP1010.png" alt="User 2SP1010" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_2SP1011.png" alt="User 2SP1011" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_2SP1012.png" alt="User 2SP1012" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_2SP1013.png" alt="User 2SP1013" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_2SP1014.png" alt="User 2SP1014" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_2SP1015.png" alt="User 2SP1015" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_2SP1010.png" alt="User 2SP1010" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_2SP1011.png" alt="User 2SP1011" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_2SP1012.png" alt="User 2SP1012" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_2SP1013.png" alt="User 2SP1013" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_2SP1014.png" alt="User 2SP1014" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_2SP1015.png" alt="User 2SP1015" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_HANGMAN_3SP1001.png" alt="User 3SP1001" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_3SP1002.png" alt="User 3SP1002" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_3SP1003.png" alt="User 3SP1003" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_3SP1001.png" alt="User 3SP1001" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_3SP1002.png" alt="User 3SP1002" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_3SP1003.png" alt="User 3SP1003" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_HANGMAN_3SP1005.png" alt="User 3SP1005" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_3SP1006.png" alt="User 3SP1006" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_3SP1007.png" alt="User 3SP1007" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_3SP1008.png" alt="User 3SP1008" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_3SP1009.png" alt="User 3SP1009" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_3SP1010.png" alt="User 3SP1010" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_3SP1011.png" alt="User 3SP1011" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_3SP1012.png" alt="User 3SP1012" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_3SP1013.png" alt="User 3SP1013" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_3SP1005.png" alt="User 3SP1005" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_3SP1006.png" alt="User 3SP1006" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_3SP1007.png" alt="User 3SP1007" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_3SP1008.png" alt="User 3SP1008" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_3SP1009.png" alt="User 3SP1009" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_3SP1010.png" alt="User 3SP1010" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_3SP1011.png" alt="User 3SP1011" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_3SP1012.png" alt="User 3SP1012" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_3SP1013.png" alt="User 3SP1013" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_HANGMAN_3SP1015.png" alt="User 3SP1015" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_3SP1016.png" alt="User 3SP1016" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_3SP1017.png" alt="User 3SP1017" width="200"></td>
-<td><img src="plots/Guess_what_HANGMAN_3SP1018.png" alt="User 3SP1018" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_3SP1015.png" alt="User 3SP1015" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_3SP1016.png" alt="User 3SP1016" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_3SP1017.png" alt="User 3SP1017" width="200"></td>
+<td><img src="plots/Guess_what__HANGMAN_3SP1018.png" alt="User 3SP1018" width="200"></td>
 <td>No Data</td>
 <td>No Data</td>
 <td>No Data</td>
 </tr>
 <tr><td>ACTION</td>
-<td><img src="plots/Guess_what_ACTION_1SP1001.png" alt="User 1SP1001" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_1SP1002.png" alt="User 1SP1002" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_1SP1003.png" alt="User 1SP1003" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_1SP1004.png" alt="User 1SP1004" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_1SP1005.png" alt="User 1SP1005" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_1SP1006.png" alt="User 1SP1006" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_1SP1007.png" alt="User 1SP1007" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_1SP1008.png" alt="User 1SP1008" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_1SP1009.png" alt="User 1SP1009" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_1SP1010.png" alt="User 1SP1010" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_1SP1011.png" alt="User 1SP1011" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_1SP1012.png" alt="User 1SP1012" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_1SP1013.png" alt="User 1SP1013" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_1SP1014.png" alt="User 1SP1014" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_1SP1015.png" alt="User 1SP1015" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_1SP1016.png" alt="User 1SP1016" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_1SP1017.png" alt="User 1SP1017" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_1SP1018.png" alt="User 1SP1018" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_2SP1001.png" alt="User 2SP1001" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_1SP1001.png" alt="User 1SP1001" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_1SP1002.png" alt="User 1SP1002" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_1SP1003.png" alt="User 1SP1003" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_1SP1004.png" alt="User 1SP1004" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_1SP1005.png" alt="User 1SP1005" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_1SP1006.png" alt="User 1SP1006" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_1SP1007.png" alt="User 1SP1007" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_1SP1008.png" alt="User 1SP1008" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_1SP1009.png" alt="User 1SP1009" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_1SP1010.png" alt="User 1SP1010" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_1SP1011.png" alt="User 1SP1011" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_1SP1012.png" alt="User 1SP1012" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_1SP1013.png" alt="User 1SP1013" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_1SP1014.png" alt="User 1SP1014" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_1SP1015.png" alt="User 1SP1015" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_1SP1016.png" alt="User 1SP1016" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_1SP1017.png" alt="User 1SP1017" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_1SP1018.png" alt="User 1SP1018" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_2SP1001.png" alt="User 2SP1001" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_ACTION_2SP1003.png" alt="User 2SP1003" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_2SP1004.png" alt="User 2SP1004" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_2SP1005.png" alt="User 2SP1005" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_2SP1006.png" alt="User 2SP1006" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_2SP1003.png" alt="User 2SP1003" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_2SP1004.png" alt="User 2SP1004" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_2SP1005.png" alt="User 2SP1005" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_2SP1006.png" alt="User 2SP1006" width="200"></td>
 <td>No Data</td>
 <td>No Data</td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_ACTION_2SP1010.png" alt="User 2SP1010" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_2SP1010.png" alt="User 2SP1010" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_ACTION_2SP1012.png" alt="User 2SP1012" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_2SP1013.png" alt="User 2SP1013" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_2SP1014.png" alt="User 2SP1014" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_2SP1015.png" alt="User 2SP1015" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_2SP1012.png" alt="User 2SP1012" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_2SP1013.png" alt="User 2SP1013" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_2SP1014.png" alt="User 2SP1014" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_2SP1015.png" alt="User 2SP1015" width="200"></td>
 <td>No Data</td>
-<td><img src="plots/Guess_what_ACTION_3SP1001.png" alt="User 3SP1001" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_3SP1002.png" alt="User 3SP1002" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_3SP1003.png" alt="User 3SP1003" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_3SP1004.png" alt="User 3SP1004" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_3SP1005.png" alt="User 3SP1005" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_3SP1006.png" alt="User 3SP1006" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_3SP1007.png" alt="User 3SP1007" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_3SP1008.png" alt="User 3SP1008" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_3SP1009.png" alt="User 3SP1009" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_3SP1010.png" alt="User 3SP1010" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_3SP1011.png" alt="User 3SP1011" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_3SP1012.png" alt="User 3SP1012" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_3SP1013.png" alt="User 3SP1013" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_3SP1014.png" alt="User 3SP1014" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_3SP1015.png" alt="User 3SP1015" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_3SP1016.png" alt="User 3SP1016" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_3SP1017.png" alt="User 3SP1017" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_3SP1018.png" alt="User 3SP1018" width="200"></td>
-<td><img src="plots/Guess_what_ACTION_3SP1019.png" alt="User 3SP1019" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_3SP1001.png" alt="User 3SP1001" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_3SP1002.png" alt="User 3SP1002" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_3SP1003.png" alt="User 3SP1003" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_3SP1004.png" alt="User 3SP1004" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_3SP1005.png" alt="User 3SP1005" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_3SP1006.png" alt="User 3SP1006" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_3SP1007.png" alt="User 3SP1007" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_3SP1008.png" alt="User 3SP1008" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_3SP1009.png" alt="User 3SP1009" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_3SP1010.png" alt="User 3SP1010" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_3SP1011.png" alt="User 3SP1011" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_3SP1012.png" alt="User 3SP1012" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_3SP1013.png" alt="User 3SP1013" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_3SP1014.png" alt="User 3SP1014" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_3SP1015.png" alt="User 3SP1015" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_3SP1016.png" alt="User 3SP1016" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_3SP1017.png" alt="User 3SP1017" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_3SP1018.png" alt="User 3SP1018" width="200"></td>
+<td><img src="plots/Guess_what__ACTION_3SP1019.png" alt="User 3SP1019" width="200"></td>
 <td>No Data</td>
 <td>No Data</td>
 </tr>
 </table>
 <h1>Pianoseq</h1>
-<table border="1" cellspacing="0" cellpadding="5">
+<table>
 <tr><th>Game Mode</th><th>User 1SP1001</th><th>User 1SP1002</th><th>User 1SP1003</th><th>User 1SP1004</th><th>User 1SP1005</th><th>User 1SP1006</th><th>User 1SP1007</th><th>User 1SP1008</th><th>User 1SP1009</th><th>User 1SP1010</th><th>User 1SP1011</th><th>User 1SP1012</th><th>User 1SP1013</th><th>User 1SP1014</th><th>User 1SP1015</th><th>User 1SP1016</th><th>User 1SP1017</th><th>User 1SP1018</th><th>User 2SP1001</th><th>User 2SP1002</th><th>User 2SP1003</th><th>User 2SP1004</th><th>User 2SP1005</th><th>User 2SP1006</th><th>User 2SP1007</th><th>User 2SP1008</th><th>User 2SP1009</th><th>User 2SP1010</th><th>User 2SP1011</th><th>User 2SP1012</th><th>User 2SP1013</th><th>User 2SP1014</th><th>User 2SP1015</th><th>User 2SP1016</th><th>User 3SP1001</th><th>User 3SP1002</th><th>User 3SP1003</th><th>User 3SP1004</th><th>User 3SP1005</th><th>User 3SP1006</th><th>User 3SP1007</th><th>User 3SP1008</th><th>User 3SP1009</th><th>User 3SP1010</th><th>User 3SP1011</th><th>User 3SP1012</th><th>User 3SP1013</th><th>User 3SP1014</th><th>User 3SP1015</th><th>User 3SP1016</th><th>User 3SP1017</th><th>User 3SP1018</th><th>User 3SP1019</th><th>User 4SP1001</th><th>User 4SP1002</th></tr>
 </table>
 <h1>Alphabet</h1>
-<table border="1" cellspacing="0" cellpadding="5">
+<table>
 <tr><th>Game Mode</th><th>User 1SP1001</th><th>User 1SP1002</th><th>User 1SP1003</th><th>User 1SP1004</th><th>User 1SP1005</th><th>User 1SP1006</th><th>User 1SP1007</th><th>User 1SP1008</th><th>User 1SP1009</th><th>User 1SP1010</th><th>User 1SP1011</th><th>User 1SP1012</th><th>User 1SP1013</th><th>User 1SP1014</th><th>User 1SP1015</th><th>User 1SP1016</th><th>User 1SP1017</th><th>User 1SP1018</th><th>User 2SP1001</th><th>User 2SP1002</th><th>User 2SP1003</th><th>User 2SP1004</th><th>User 2SP1005</th><th>User 2SP1006</th><th>User 2SP1007</th><th>User 2SP1008</th><th>User 2SP1009</th><th>User 2SP1010</th><th>User 2SP1011</th><th>User 2SP1012</th><th>User 2SP1013</th><th>User 2SP1014</th><th>User 2SP1015</th><th>User 2SP1016</th><th>User 3SP1001</th><th>User 3SP1002</th><th>User 3SP1003</th><th>User 3SP1004</th><th>User 3SP1005</th><th>User 3SP1006</th><th>User 3SP1007</th><th>User 3SP1008</th><th>User 3SP1009</th><th>User 3SP1010</th><th>User 3SP1011</th><th>User 3SP1012</th><th>User 3SP1013</th><th>User 3SP1014</th><th>User 3SP1015</th><th>User 3SP1016</th><th>User 3SP1017</th><th>User 3SP1018</th><th>User 3SP1019</th><th>User 4SP1001</th><th>User 4SP1002</th></tr>
 </table>
 <h1>Spheroids</h1>
-<table border="1" cellspacing="0" cellpadding="5">
+<table>
 <tr><th>Game Mode</th><th>User 1SP1001</th><th>User 1SP1002</th><th>User 1SP1003</th><th>User 1SP1004</th><th>User 1SP1005</th><th>User 1SP1006</th><th>User 1SP1007</th><th>User 1SP1008</th><th>User 1SP1009</th><th>User 1SP1010</th><th>User 1SP1011</th><th>User 1SP1012</th><th>User 1SP1013</th><th>User 1SP1014</th><th>User 1SP1015</th><th>User 1SP1016</th><th>User 1SP1017</th><th>User 1SP1018</th><th>User 2SP1001</th><th>User 2SP1002</th><th>User 2SP1003</th><th>User 2SP1004</th><th>User 2SP1005</th><th>User 2SP1006</th><th>User 2SP1007</th><th>User 2SP1008</th><th>User 2SP1009</th><th>User 2SP1010</th><th>User 2SP1011</th><th>User 2SP1012</th><th>User 2SP1013</th><th>User 2SP1014</th><th>User 2SP1015</th><th>User 2SP1016</th><th>User 3SP1001</th><th>User 3SP1002</th><th>User 3SP1003</th><th>User 3SP1004</th><th>User 3SP1005</th><th>User 3SP1006</th><th>User 3SP1007</th><th>User 3SP1008</th><th>User 3SP1009</th><th>User 3SP1010</th><th>User 3SP1011</th><th>User 3SP1012</th><th>User 3SP1013</th><th>User 3SP1014</th><th>User 3SP1015</th><th>User 3SP1016</th><th>User 3SP1017</th><th>User 3SP1018</th><th>User 3SP1019</th><th>User 4SP1001</th><th>User 4SP1002</th></tr>
 <tr><td>STANDARD</td>
 <td><img src="plots/Spheroids_STANDARD_1SP1001.png" alt="User 1SP1001" width="200"></td>
@@ -602,7 +701,7 @@
 </tr>
 </table>
 <h1>Memoseq</h1>
-<table border="1" cellspacing="0" cellpadding="5">
+<table>
 <tr><th>Game Mode</th><th>User 1SP1001</th><th>User 1SP1002</th><th>User 1SP1003</th><th>User 1SP1004</th><th>User 1SP1005</th><th>User 1SP1006</th><th>User 1SP1007</th><th>User 1SP1008</th><th>User 1SP1009</th><th>User 1SP1010</th><th>User 1SP1011</th><th>User 1SP1012</th><th>User 1SP1013</th><th>User 1SP1014</th><th>User 1SP1015</th><th>User 1SP1016</th><th>User 1SP1017</th><th>User 1SP1018</th><th>User 2SP1001</th><th>User 2SP1002</th><th>User 2SP1003</th><th>User 2SP1004</th><th>User 2SP1005</th><th>User 2SP1006</th><th>User 2SP1007</th><th>User 2SP1008</th><th>User 2SP1009</th><th>User 2SP1010</th><th>User 2SP1011</th><th>User 2SP1012</th><th>User 2SP1013</th><th>User 2SP1014</th><th>User 2SP1015</th><th>User 2SP1016</th><th>User 3SP1001</th><th>User 3SP1002</th><th>User 3SP1003</th><th>User 3SP1004</th><th>User 3SP1005</th><th>User 3SP1006</th><th>User 3SP1007</th><th>User 3SP1008</th><th>User 3SP1009</th><th>User 3SP1010</th><th>User 3SP1011</th><th>User 3SP1012</th><th>User 3SP1013</th><th>User 3SP1014</th><th>User 3SP1015</th><th>User 3SP1016</th><th>User 3SP1017</th><th>User 3SP1018</th><th>User 3SP1019</th><th>User 4SP1001</th><th>User 4SP1002</th></tr>
 <tr><td>CATEGORIES</td>
 <td><img src="plots/Memoseq_CATEGORIES_1SP1001.png" alt="User 1SP1001" width="200"></td>
@@ -1119,7 +1218,7 @@
 </tr>
 </table>
 <h1>Potpourri</h1>
-<table border="1" cellspacing="0" cellpadding="5">
+<table>
 <tr><th>Game Mode</th><th>User 1SP1001</th><th>User 1SP1002</th><th>User 1SP1003</th><th>User 1SP1004</th><th>User 1SP1005</th><th>User 1SP1006</th><th>User 1SP1007</th><th>User 1SP1008</th><th>User 1SP1009</th><th>User 1SP1010</th><th>User 1SP1011</th><th>User 1SP1012</th><th>User 1SP1013</th><th>User 1SP1014</th><th>User 1SP1015</th><th>User 1SP1016</th><th>User 1SP1017</th><th>User 1SP1018</th><th>User 2SP1001</th><th>User 2SP1002</th><th>User 2SP1003</th><th>User 2SP1004</th><th>User 2SP1005</th><th>User 2SP1006</th><th>User 2SP1007</th><th>User 2SP1008</th><th>User 2SP1009</th><th>User 2SP1010</th><th>User 2SP1011</th><th>User 2SP1012</th><th>User 2SP1013</th><th>User 2SP1014</th><th>User 2SP1015</th><th>User 2SP1016</th><th>User 3SP1001</th><th>User 3SP1002</th><th>User 3SP1003</th><th>User 3SP1004</th><th>User 3SP1005</th><th>User 3SP1006</th><th>User 3SP1007</th><th>User 3SP1008</th><th>User 3SP1009</th><th>User 3SP1010</th><th>User 3SP1011</th><th>User 3SP1012</th><th>User 3SP1013</th><th>User 3SP1014</th><th>User 3SP1015</th><th>User 3SP1016</th><th>User 3SP1017</th><th>User 3SP1018</th><th>User 3SP1019</th><th>User 4SP1001</th><th>User 4SP1002</th></tr>
 <tr><td>PAY</td>
 <td><img src="plots/Potpourri_PAY_1SP1001.png" alt="User 1SP1001" width="200"></td>
@@ -1237,7 +1336,7 @@
 </tr>
 </table>
 <h1>Driving</h1>
-<table border="1" cellspacing="0" cellpadding="5">
+<table>
 <tr><th>Game Mode</th><th>User 1SP1001</th><th>User 1SP1002</th><th>User 1SP1003</th><th>User 1SP1004</th><th>User 1SP1005</th><th>User 1SP1006</th><th>User 1SP1007</th><th>User 1SP1008</th><th>User 1SP1009</th><th>User 1SP1010</th><th>User 1SP1011</th><th>User 1SP1012</th><th>User 1SP1013</th><th>User 1SP1014</th><th>User 1SP1015</th><th>User 1SP1016</th><th>User 1SP1017</th><th>User 1SP1018</th><th>User 2SP1001</th><th>User 2SP1002</th><th>User 2SP1003</th><th>User 2SP1004</th><th>User 2SP1005</th><th>User 2SP1006</th><th>User 2SP1007</th><th>User 2SP1008</th><th>User 2SP1009</th><th>User 2SP1010</th><th>User 2SP1011</th><th>User 2SP1012</th><th>User 2SP1013</th><th>User 2SP1014</th><th>User 2SP1015</th><th>User 2SP1016</th><th>User 3SP1001</th><th>User 3SP1002</th><th>User 3SP1003</th><th>User 3SP1004</th><th>User 3SP1005</th><th>User 3SP1006</th><th>User 3SP1007</th><th>User 3SP1008</th><th>User 3SP1009</th><th>User 3SP1010</th><th>User 3SP1011</th><th>User 3SP1012</th><th>User 3SP1013</th><th>User 3SP1014</th><th>User 3SP1015</th><th>User 3SP1016</th><th>User 3SP1017</th><th>User 3SP1018</th><th>User 3SP1019</th><th>User 4SP1001</th><th>User 4SP1002</th></tr>
 <tr><td>STANDARD</td>
 <td><img src="plots/Driving_STANDARD_1SP1001.png" alt="User 1SP1001" width="200"></td>
@@ -1298,7 +1397,7 @@
 </tr>
 </table>
 <h1>Memory</h1>
-<table border="1" cellspacing="0" cellpadding="5">
+<table>
 <tr><th>Game Mode</th><th>User 1SP1001</th><th>User 1SP1002</th><th>User 1SP1003</th><th>User 1SP1004</th><th>User 1SP1005</th><th>User 1SP1006</th><th>User 1SP1007</th><th>User 1SP1008</th><th>User 1SP1009</th><th>User 1SP1010</th><th>User 1SP1011</th><th>User 1SP1012</th><th>User 1SP1013</th><th>User 1SP1014</th><th>User 1SP1015</th><th>User 1SP1016</th><th>User 1SP1017</th><th>User 1SP1018</th><th>User 2SP1001</th><th>User 2SP1002</th><th>User 2SP1003</th><th>User 2SP1004</th><th>User 2SP1005</th><th>User 2SP1006</th><th>User 2SP1007</th><th>User 2SP1008</th><th>User 2SP1009</th><th>User 2SP1010</th><th>User 2SP1011</th><th>User 2SP1012</th><th>User 2SP1013</th><th>User 2SP1014</th><th>User 2SP1015</th><th>User 2SP1016</th><th>User 3SP1001</th><th>User 3SP1002</th><th>User 3SP1003</th><th>User 3SP1004</th><th>User 3SP1005</th><th>User 3SP1006</th><th>User 3SP1007</th><th>User 3SP1008</th><th>User 3SP1009</th><th>User 3SP1010</th><th>User 3SP1011</th><th>User 3SP1012</th><th>User 3SP1013</th><th>User 3SP1014</th><th>User 3SP1015</th><th>User 3SP1016</th><th>User 3SP1017</th><th>User 3SP1018</th><th>User 3SP1019</th><th>User 4SP1001</th><th>User 4SP1002</th></tr>
 <tr><td>STANDARD</td>
 <td><img src="plots/Memory_STANDARD_1SP1001.png" alt="User 1SP1001" width="200"></td>
@@ -1359,7 +1458,7 @@
 </tr>
 </table>
 <h1>Ducks</h1>
-<table border="1" cellspacing="0" cellpadding="5">
+<table>
 <tr><th>Game Mode</th><th>User 1SP1001</th><th>User 1SP1002</th><th>User 1SP1003</th><th>User 1SP1004</th><th>User 1SP1005</th><th>User 1SP1006</th><th>User 1SP1007</th><th>User 1SP1008</th><th>User 1SP1009</th><th>User 1SP1010</th><th>User 1SP1011</th><th>User 1SP1012</th><th>User 1SP1013</th><th>User 1SP1014</th><th>User 1SP1015</th><th>User 1SP1016</th><th>User 1SP1017</th><th>User 1SP1018</th><th>User 2SP1001</th><th>User 2SP1002</th><th>User 2SP1003</th><th>User 2SP1004</th><th>User 2SP1005</th><th>User 2SP1006</th><th>User 2SP1007</th><th>User 2SP1008</th><th>User 2SP1009</th><th>User 2SP1010</th><th>User 2SP1011</th><th>User 2SP1012</th><th>User 2SP1013</th><th>User 2SP1014</th><th>User 2SP1015</th><th>User 2SP1016</th><th>User 3SP1001</th><th>User 3SP1002</th><th>User 3SP1003</th><th>User 3SP1004</th><th>User 3SP1005</th><th>User 3SP1006</th><th>User 3SP1007</th><th>User 3SP1008</th><th>User 3SP1009</th><th>User 3SP1010</th><th>User 3SP1011</th><th>User 3SP1012</th><th>User 3SP1013</th><th>User 3SP1014</th><th>User 3SP1015</th><th>User 3SP1016</th><th>User 3SP1017</th><th>User 3SP1018</th><th>User 3SP1019</th><th>User 4SP1001</th><th>User 4SP1002</th></tr>
 <tr><td>CATEGORIES</td>
 <td><img src="plots/Ducks_CATEGORIES_1SP1001.png" alt="User 1SP1001" width="200"></td>
@@ -1420,7 +1519,7 @@
 </tr>
 </table>
 <h1>Balloons Basic</h1>
-<table border="1" cellspacing="0" cellpadding="5">
+<table>
 <tr><th>Game Mode</th><th>User 1SP1001</th><th>User 1SP1002</th><th>User 1SP1003</th><th>User 1SP1004</th><th>User 1SP1005</th><th>User 1SP1006</th><th>User 1SP1007</th><th>User 1SP1008</th><th>User 1SP1009</th><th>User 1SP1010</th><th>User 1SP1011</th><th>User 1SP1012</th><th>User 1SP1013</th><th>User 1SP1014</th><th>User 1SP1015</th><th>User 1SP1016</th><th>User 1SP1017</th><th>User 1SP1018</th><th>User 2SP1001</th><th>User 2SP1002</th><th>User 2SP1003</th><th>User 2SP1004</th><th>User 2SP1005</th><th>User 2SP1006</th><th>User 2SP1007</th><th>User 2SP1008</th><th>User 2SP1009</th><th>User 2SP1010</th><th>User 2SP1011</th><th>User 2SP1012</th><th>User 2SP1013</th><th>User 2SP1014</th><th>User 2SP1015</th><th>User 2SP1016</th><th>User 3SP1001</th><th>User 3SP1002</th><th>User 3SP1003</th><th>User 3SP1004</th><th>User 3SP1005</th><th>User 3SP1006</th><th>User 3SP1007</th><th>User 3SP1008</th><th>User 3SP1009</th><th>User 3SP1010</th><th>User 3SP1011</th><th>User 3SP1012</th><th>User 3SP1013</th><th>User 3SP1014</th><th>User 3SP1015</th><th>User 3SP1016</th><th>User 3SP1017</th><th>User 3SP1018</th><th>User 3SP1019</th><th>User 4SP1001</th><th>User 4SP1002</th></tr>
 <tr><td>STANDARD</td>
 <td><img src="plots/Balloons_Basic_STANDARD_1SP1001.png" alt="User 1SP1001" width="200"></td>
@@ -1481,7 +1580,7 @@
 </tr>
 </table>
 <h1>Blobs</h1>
-<table border="1" cellspacing="0" cellpadding="5">
+<table>
 <tr><th>Game Mode</th><th>User 1SP1001</th><th>User 1SP1002</th><th>User 1SP1003</th><th>User 1SP1004</th><th>User 1SP1005</th><th>User 1SP1006</th><th>User 1SP1007</th><th>User 1SP1008</th><th>User 1SP1009</th><th>User 1SP1010</th><th>User 1SP1011</th><th>User 1SP1012</th><th>User 1SP1013</th><th>User 1SP1014</th><th>User 1SP1015</th><th>User 1SP1016</th><th>User 1SP1017</th><th>User 1SP1018</th><th>User 2SP1001</th><th>User 2SP1002</th><th>User 2SP1003</th><th>User 2SP1004</th><th>User 2SP1005</th><th>User 2SP1006</th><th>User 2SP1007</th><th>User 2SP1008</th><th>User 2SP1009</th><th>User 2SP1010</th><th>User 2SP1011</th><th>User 2SP1012</th><th>User 2SP1013</th><th>User 2SP1014</th><th>User 2SP1015</th><th>User 2SP1016</th><th>User 3SP1001</th><th>User 3SP1002</th><th>User 3SP1003</th><th>User 3SP1004</th><th>User 3SP1005</th><th>User 3SP1006</th><th>User 3SP1007</th><th>User 3SP1008</th><th>User 3SP1009</th><th>User 3SP1010</th><th>User 3SP1011</th><th>User 3SP1012</th><th>User 3SP1013</th><th>User 3SP1014</th><th>User 3SP1015</th><th>User 3SP1016</th><th>User 3SP1017</th><th>User 3SP1018</th><th>User 3SP1019</th><th>User 4SP1001</th><th>User 4SP1002</th></tr>
 <tr><td>STANDARD</td>
 <td><img src="plots/Blobs_STANDARD_1SP1001.png" alt="User 1SP1001" width="200"></td>
@@ -1599,7 +1698,7 @@
 </tr>
 </table>
 <h1>Shelves</h1>
-<table border="1" cellspacing="0" cellpadding="5">
+<table>
 <tr><th>Game Mode</th><th>User 1SP1001</th><th>User 1SP1002</th><th>User 1SP1003</th><th>User 1SP1004</th><th>User 1SP1005</th><th>User 1SP1006</th><th>User 1SP1007</th><th>User 1SP1008</th><th>User 1SP1009</th><th>User 1SP1010</th><th>User 1SP1011</th><th>User 1SP1012</th><th>User 1SP1013</th><th>User 1SP1014</th><th>User 1SP1015</th><th>User 1SP1016</th><th>User 1SP1017</th><th>User 1SP1018</th><th>User 2SP1001</th><th>User 2SP1002</th><th>User 2SP1003</th><th>User 2SP1004</th><th>User 2SP1005</th><th>User 2SP1006</th><th>User 2SP1007</th><th>User 2SP1008</th><th>User 2SP1009</th><th>User 2SP1010</th><th>User 2SP1011</th><th>User 2SP1012</th><th>User 2SP1013</th><th>User 2SP1014</th><th>User 2SP1015</th><th>User 2SP1016</th><th>User 3SP1001</th><th>User 3SP1002</th><th>User 3SP1003</th><th>User 3SP1004</th><th>User 3SP1005</th><th>User 3SP1006</th><th>User 3SP1007</th><th>User 3SP1008</th><th>User 3SP1009</th><th>User 3SP1010</th><th>User 3SP1011</th><th>User 3SP1012</th><th>User 3SP1013</th><th>User 3SP1014</th><th>User 3SP1015</th><th>User 3SP1016</th><th>User 3SP1017</th><th>User 3SP1018</th><th>User 3SP1019</th><th>User 4SP1001</th><th>User 4SP1002</th></tr>
 <tr><td>SEQUENCE</td>
 <td><img src="plots/Shelves_SEQUENCE_1SP1001.png" alt="User 1SP1001" width="200"></td>
@@ -1660,7 +1759,7 @@
 </tr>
 </table>
 <h1>Buffet</h1>
-<table border="1" cellspacing="0" cellpadding="5">
+<table>
 <tr><th>Game Mode</th><th>User 1SP1001</th><th>User 1SP1002</th><th>User 1SP1003</th><th>User 1SP1004</th><th>User 1SP1005</th><th>User 1SP1006</th><th>User 1SP1007</th><th>User 1SP1008</th><th>User 1SP1009</th><th>User 1SP1010</th><th>User 1SP1011</th><th>User 1SP1012</th><th>User 1SP1013</th><th>User 1SP1014</th><th>User 1SP1015</th><th>User 1SP1016</th><th>User 1SP1017</th><th>User 1SP1018</th><th>User 2SP1001</th><th>User 2SP1002</th><th>User 2SP1003</th><th>User 2SP1004</th><th>User 2SP1005</th><th>User 2SP1006</th><th>User 2SP1007</th><th>User 2SP1008</th><th>User 2SP1009</th><th>User 2SP1010</th><th>User 2SP1011</th><th>User 2SP1012</th><th>User 2SP1013</th><th>User 2SP1014</th><th>User 2SP1015</th><th>User 2SP1016</th><th>User 3SP1001</th><th>User 3SP1002</th><th>User 3SP1003</th><th>User 3SP1004</th><th>User 3SP1005</th><th>User 3SP1006</th><th>User 3SP1007</th><th>User 3SP1008</th><th>User 3SP1009</th><th>User 3SP1010</th><th>User 3SP1011</th><th>User 3SP1012</th><th>User 3SP1013</th><th>User 3SP1014</th><th>User 3SP1015</th><th>User 3SP1016</th><th>User 3SP1017</th><th>User 3SP1018</th><th>User 3SP1019</th><th>User 4SP1001</th><th>User 4SP1002</th></tr>
 <tr><td>CATEGORIES</td>
 <td>No Data</td>
@@ -1721,7 +1820,7 @@
 </tr>
 </table>
 <h1>Balloons</h1>
-<table border="1" cellspacing="0" cellpadding="5">
+<table>
 <tr><th>Game Mode</th><th>User 1SP1001</th><th>User 1SP1002</th><th>User 1SP1003</th><th>User 1SP1004</th><th>User 1SP1005</th><th>User 1SP1006</th><th>User 1SP1007</th><th>User 1SP1008</th><th>User 1SP1009</th><th>User 1SP1010</th><th>User 1SP1011</th><th>User 1SP1012</th><th>User 1SP1013</th><th>User 1SP1014</th><th>User 1SP1015</th><th>User 1SP1016</th><th>User 1SP1017</th><th>User 1SP1018</th><th>User 2SP1001</th><th>User 2SP1002</th><th>User 2SP1003</th><th>User 2SP1004</th><th>User 2SP1005</th><th>User 2SP1006</th><th>User 2SP1007</th><th>User 2SP1008</th><th>User 2SP1009</th><th>User 2SP1010</th><th>User 2SP1011</th><th>User 2SP1012</th><th>User 2SP1013</th><th>User 2SP1014</th><th>User 2SP1015</th><th>User 2SP1016</th><th>User 3SP1001</th><th>User 3SP1002</th><th>User 3SP1003</th><th>User 3SP1004</th><th>User 3SP1005</th><th>User 3SP1006</th><th>User 3SP1007</th><th>User 3SP1008</th><th>User 3SP1009</th><th>User 3SP1010</th><th>User 3SP1011</th><th>User 3SP1012</th><th>User 3SP1013</th><th>User 3SP1014</th><th>User 3SP1015</th><th>User 3SP1016</th><th>User 3SP1017</th><th>User 3SP1018</th><th>User 3SP1019</th><th>User 4SP1001</th><th>User 4SP1002</th></tr>
 <tr><td>CATEGORIES</td>
 <td>No Data</td>
@@ -1782,7 +1881,7 @@
 </tr>
 </table>
 <h1>Tubes</h1>
-<table border="1" cellspacing="0" cellpadding="5">
+<table>
 <tr><th>Game Mode</th><th>User 1SP1001</th><th>User 1SP1002</th><th>User 1SP1003</th><th>User 1SP1004</th><th>User 1SP1005</th><th>User 1SP1006</th><th>User 1SP1007</th><th>User 1SP1008</th><th>User 1SP1009</th><th>User 1SP1010</th><th>User 1SP1011</th><th>User 1SP1012</th><th>User 1SP1013</th><th>User 1SP1014</th><th>User 1SP1015</th><th>User 1SP1016</th><th>User 1SP1017</th><th>User 1SP1018</th><th>User 2SP1001</th><th>User 2SP1002</th><th>User 2SP1003</th><th>User 2SP1004</th><th>User 2SP1005</th><th>User 2SP1006</th><th>User 2SP1007</th><th>User 2SP1008</th><th>User 2SP1009</th><th>User 2SP1010</th><th>User 2SP1011</th><th>User 2SP1012</th><th>User 2SP1013</th><th>User 2SP1014</th><th>User 2SP1015</th><th>User 2SP1016</th><th>User 3SP1001</th><th>User 3SP1002</th><th>User 3SP1003</th><th>User 3SP1004</th><th>User 3SP1005</th><th>User 3SP1006</th><th>User 3SP1007</th><th>User 3SP1008</th><th>User 3SP1009</th><th>User 3SP1010</th><th>User 3SP1011</th><th>User 3SP1012</th><th>User 3SP1013</th><th>User 3SP1014</th><th>User 3SP1015</th><th>User 3SP1016</th><th>User 3SP1017</th><th>User 3SP1018</th><th>User 3SP1019</th><th>User 4SP1001</th><th>User 4SP1002</th></tr>
 <tr><td>STANDARD</td>
 <td>No Data</td>
@@ -1842,4 +1941,245 @@
 <td><img src="plots/Tubes_STANDARD_4SP1002.png" alt="User 4SP1002" width="200"></td>
 </tr>
 </table>
+</div>
+<div id="RedundancyAnalysis" class="tabcontent">
+<h1>QualityControlBasic</h1>
+<table>
+<tr><th>Game Mode</th><th>Correlation Matrix</th><th>DM Legend</th><th>PCA Scree Plot</th></tr>
+<tr>
+<td>STANDARD</td>
+<td><img src="redundancy_analysis/QualityControlBasic_STANDARD_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: standard_dm_fries</li><li><strong>dm2</strong>: standard_dm_burgers</li><li><strong>dm3</strong>: standard_dm_distractors</li></ul></div></td>
+<td><img src="redundancy_analysis/QualityControlBasic_STANDARD_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+</table>
+<h1>ConstellationsBasic</h1>
+<table>
+<tr><th>Game Mode</th><th>Correlation Matrix</th><th>DM Legend</th><th>PCA Scree Plot</th></tr>
+<tr>
+<td>STANDARD</td>
+<td><img src="redundancy_analysis/ConstellationsBasic_STANDARD_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: standard_dm_sequenceRandomness</li><li><strong>dm2</strong>: standard_dm_sequenceStepDuration</li><li><strong>dm3</strong>: standard_dm_sequenceLength</li><li><strong>dm4</strong>: standard_dm_constellationLength</li><li><strong>dm5</strong>: standard_dm_startInteractionDelay</li></ul></div></td>
+<td><img src="redundancy_analysis/ConstellationsBasic_STANDARD_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+</table>
+<h1>Circle horizontal activity</h1>
+<table>
+<tr><th>Game Mode</th><th>Correlation Matrix</th><th>DM Legend</th><th>PCA Scree Plot</th></tr>
+</table>
+<h1>Circle activity</h1>
+<table>
+<tr><th>Game Mode</th><th>Correlation Matrix</th><th>DM Legend</th><th>PCA Scree Plot</th></tr>
+</table>
+<h1>Guess what?</h1>
+<table>
+<tr><th>Game Mode</th><th>Correlation Matrix</th><th>DM Legend</th><th>PCA Scree Plot</th></tr>
+<tr>
+<td>DIRECT</td>
+<td><img src="redundancy_analysis/Guess_what__DIRECT_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: direct_dm_targetsNumber</li><li><strong>dm2</strong>: direct_dm_distractorsNumber</li><li><strong>dm3</strong>: direct_dm_curtainSlideTime</li><li><strong>dm4</strong>: direct_dm_hangmanCompletionSpeed</li><li><strong>dm5</strong>: direct_dm_maxRotationDegrees</li></ul></div></td>
+<td><img src="redundancy_analysis/Guess_what__DIRECT_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+<tr>
+<td>YES_NO</td>
+<td><img src="redundancy_analysis/Guess_what__YES_NO_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: yesNo_dm_targetsNumber</li><li><strong>dm2</strong>: yesNo_dm_distractorsNumber</li><li><strong>dm3</strong>: yesNo_dm_curtainSlideTime</li><li><strong>dm4</strong>: yesNo_dm_hangmanCompletionSpeed</li><li><strong>dm5</strong>: yesNo_dm_maxRotationDegrees</li></ul></div></td>
+<td><img src="redundancy_analysis/Guess_what__YES_NO_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+<tr>
+<td>YES_NO_ACTION</td>
+<td><img src="redundancy_analysis/Guess_what__YES_NO_ACTION_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: yesNoAction_dm_targetsNumber</li><li><strong>dm2</strong>: yesNoAction_dm_distractorsNumber</li><li><strong>dm3</strong>: yesNoAction_dm_curtainSlideTime</li><li><strong>dm4</strong>: yesNoAction_dm_hangmanCompletionSpeed</li><li><strong>dm5</strong>: yesNoAction_dm_maxRotationDegrees</li></ul></div></td>
+<td><img src="redundancy_analysis/Guess_what__YES_NO_ACTION_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+<tr>
+<td>HANGMAN</td>
+<td><img src="redundancy_analysis/Guess_what__HANGMAN_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: hangman_dm_targetsNumber</li><li><strong>dm2</strong>: hangman_dm_distractorsNumber</li><li><strong>dm3</strong>: hangman_dm_curtainSlideTime</li><li><strong>dm4</strong>: hangman_dm_hangmanCompletionSpeed</li><li><strong>dm5</strong>: hangman_dm_maxRotationDegrees</li></ul></div></td>
+<td><img src="redundancy_analysis/Guess_what__HANGMAN_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+<tr>
+<td>ACTION</td>
+<td><img src="redundancy_analysis/Guess_what__ACTION_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: action_dm_targetsNumber</li><li><strong>dm2</strong>: action_dm_distractorsNumber</li><li><strong>dm3</strong>: action_dm_curtainSlideTime</li><li><strong>dm4</strong>: action_dm_hangmanCompletionSpeed</li><li><strong>dm5</strong>: action_dm_maxRotationDegrees</li></ul></div></td>
+<td><img src="redundancy_analysis/Guess_what__ACTION_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+</table>
+<h1>Pianoseq</h1>
+<table>
+<tr><th>Game Mode</th><th>Correlation Matrix</th><th>DM Legend</th><th>PCA Scree Plot</th></tr>
+</table>
+<h1>Alphabet</h1>
+<table>
+<tr><th>Game Mode</th><th>Correlation Matrix</th><th>DM Legend</th><th>PCA Scree Plot</th></tr>
+</table>
+<h1>Spheroids</h1>
+<table>
+<tr><th>Game Mode</th><th>Correlation Matrix</th><th>DM Legend</th><th>PCA Scree Plot</th></tr>
+<tr>
+<td>STANDARD</td>
+<td><img src="redundancy_analysis/Spheroids_STANDARD_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: standard_dm_speed</li><li><strong>dm2</strong>: standard_dm_size</li><li><strong>dm3</strong>: standard_dm_dispersion</li><li><strong>dm4</strong>: standard_dm_height</li><li><strong>dm5</strong>: standard_dm_distractorsProbability</li><li><strong>dm6</strong>: standard_dm_correctSphereInSequenceProbability</li><li><strong>dm7</strong>: standard_dm_categoriesNumber</li></ul></div></td>
+<td><img src="redundancy_analysis/Spheroids_STANDARD_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+</table>
+<h1>Memoseq</h1>
+<table>
+<tr><th>Game Mode</th><th>Correlation Matrix</th><th>DM Legend</th><th>PCA Scree Plot</th></tr>
+<tr>
+<td>CATEGORIES</td>
+<td><img src="redundancy_analysis/Memoseq_CATEGORIES_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: categories_dm_targetsNumber</li><li><strong>dm2</strong>: categories_dm_distractorsNumber</li><li><strong>dm3</strong>: categories_dm_delayOnShowSequence</li><li><strong>dm4</strong>: categories_dm_referenceImageDisplayTime</li><li><strong>dm5</strong>: categories_dm_maxRotationDegrees</li></ul></div></td>
+<td><img src="redundancy_analysis/Memoseq_CATEGORIES_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+<tr>
+<td>INVERSE_CATEGORIES</td>
+<td><img src="redundancy_analysis/Memoseq_INVERSE_CATEGORIES_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: inverseCategories_dm_targetsNumber</li><li><strong>dm2</strong>: inverseCategories_dm_distractorsNumber</li><li><strong>dm3</strong>: inverseCategories_dm_delayOnShowSequence</li><li><strong>dm4</strong>: inverseCategories_dm_referenceImageDisplayTime</li><li><strong>dm5</strong>: inverseCategories_dm_maxRotationDegrees</li></ul></div></td>
+<td><img src="redundancy_analysis/Memoseq_INVERSE_CATEGORIES_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+<tr>
+<td>ORDER_SEQUENCE</td>
+<td><img src="redundancy_analysis/Memoseq_ORDER_SEQUENCE_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: orderSequence_dm_targetsNumber</li><li><strong>dm2</strong>: orderSequence_dm_distractorsNumber</li><li><strong>dm3</strong>: orderSequence_dm_delayOnShowSequence</li><li><strong>dm4</strong>: orderSequence_dm_referenceImageDisplayTime</li><li><strong>dm5</strong>: orderSequence_dm_maxRotationDegrees</li></ul></div></td>
+<td><img src="redundancy_analysis/Memoseq_ORDER_SEQUENCE_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+<tr>
+<td>SMALLER_TO_BIGGER</td>
+<td><img src="redundancy_analysis/Memoseq_SMALLER_TO_BIGGER_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: smallerToBigger_dm_targetsNumber</li><li><strong>dm2</strong>: smallerToBigger_dm_distractorsNumber</li><li><strong>dm3</strong>: smallerToBigger_dm_delayOnShowSequence</li><li><strong>dm4</strong>: smallerToBigger_dm_referenceImageDisplayTime</li><li><strong>dm5</strong>: smallerToBigger_dm_maxRotationDegrees</li></ul></div></td>
+<td><img src="redundancy_analysis/Memoseq_SMALLER_TO_BIGGER_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+<tr>
+<td>BIGGER_TO_SMALLER</td>
+<td><img src="redundancy_analysis/Memoseq_BIGGER_TO_SMALLER_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: biggerToSmaller_dm_targetsNumber</li><li><strong>dm2</strong>: biggerToSmaller_dm_distractorsNumber</li><li><strong>dm3</strong>: biggerToSmaller_dm_delayOnShowSequence</li><li><strong>dm4</strong>: biggerToSmaller_dm_referenceImageDisplayTime</li><li><strong>dm5</strong>: biggerToSmaller_dm_maxRotationDegrees</li></ul></div></td>
+<td><img src="redundancy_analysis/Memoseq_BIGGER_TO_SMALLER_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+<tr>
+<td>INVERSE_ORDER_SEQUENCE</td>
+<td><img src="redundancy_analysis/Memoseq_INVERSE_ORDER_SEQUENCE_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: inverseOrderSequence_dm_targetsNumber</li><li><strong>dm2</strong>: inverseOrderSequence_dm_distractorsNumber</li><li><strong>dm3</strong>: inverseOrderSequence_dm_delayOnShowSequence</li><li><strong>dm4</strong>: inverseOrderSequence_dm_referenceImageDisplayTime</li><li><strong>dm5</strong>: inverseOrderSequence_dm_maxRotationDegrees</li></ul></div></td>
+<td><img src="redundancy_analysis/Memoseq_INVERSE_ORDER_SEQUENCE_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+<tr>
+<td>UNORDERED_GROUP</td>
+<td><img src="redundancy_analysis/Memoseq_UNORDERED_GROUP_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: unorderedGroup_dm_targetsNumber</li><li><strong>dm2</strong>: unorderedGroup_dm_distractorsNumber</li><li><strong>dm3</strong>: unorderedGroup_dm_delayOnShowSequence</li><li><strong>dm4</strong>: unorderedGroup_dm_referenceImageDisplayTime</li><li><strong>dm5</strong>: unorderedGroup_dm_maxRotationDegrees</li></ul></div></td>
+<td><img src="redundancy_analysis/Memoseq_UNORDERED_GROUP_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+<tr>
+<td>REFERENCE</td>
+<td><img src="redundancy_analysis/Memoseq_REFERENCE_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: reference_dm_targetsNumber</li><li><strong>dm2</strong>: reference_dm_distractorsNumber</li><li><strong>dm3</strong>: reference_dm_delayOnShowSequence</li><li><strong>dm4</strong>: reference_dm_referenceImageDisplayTime</li><li><strong>dm5</strong>: reference_dm_maxRotationDegrees</li></ul></div></td>
+<td><img src="redundancy_analysis/Memoseq_REFERENCE_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+<tr>
+<td>INVERSE_REFERENCE</td>
+<td><img src="redundancy_analysis/Memoseq_INVERSE_REFERENCE_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: inverseReference_dm_targetsNumber</li><li><strong>dm2</strong>: inverseReference_dm_distractorsNumber</li><li><strong>dm3</strong>: inverseReference_dm_delayOnShowSequence</li><li><strong>dm4</strong>: inverseReference_dm_referenceImageDisplayTime</li><li><strong>dm5</strong>: inverseReference_dm_maxRotationDegrees</li></ul></div></td>
+<td><img src="redundancy_analysis/Memoseq_INVERSE_REFERENCE_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+</table>
+<h1>Potpourri</h1>
+<table>
+<tr><th>Game Mode</th><th>Correlation Matrix</th><th>DM Legend</th><th>PCA Scree Plot</th></tr>
+<tr>
+<td>PAY</td>
+<td><img src="redundancy_analysis/Potpourri_PAY_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: pay_dm_targetsNumber</li><li><strong>dm2</strong>: pay_dm_distractorsNumber</li></ul></div></td>
+<td><img src="redundancy_analysis/Potpourri_PAY_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+<tr>
+<td>SPELL_WORDS</td>
+<td><img src="redundancy_analysis/Potpourri_SPELL_WORDS_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: spellWords_dm_targetsNumber</li><li><strong>dm2</strong>: spellWords_dm_distractorsNumber</li></ul></div></td>
+<td><img src="redundancy_analysis/Potpourri_SPELL_WORDS_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+</table>
+<h1>Driving</h1>
+<table>
+<tr><th>Game Mode</th><th>Correlation Matrix</th><th>DM Legend</th><th>PCA Scree Plot</th></tr>
+<tr>
+<td>STANDARD</td>
+<td><img src="redundancy_analysis/Driving_STANDARD_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: standard_dm_speed</li><li><strong>dm2</strong>: standard_dm_obstaclesNumber</li></ul></div></td>
+<td><img src="redundancy_analysis/Driving_STANDARD_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+</table>
+<h1>Memory</h1>
+<table>
+<tr><th>Game Mode</th><th>Correlation Matrix</th><th>DM Legend</th><th>PCA Scree Plot</th></tr>
+</table>
+<h1>Ducks</h1>
+<table>
+<tr><th>Game Mode</th><th>Correlation Matrix</th><th>DM Legend</th><th>PCA Scree Plot</th></tr>
+<tr>
+<td>CATEGORIES</td>
+<td><img src="redundancy_analysis/Ducks_CATEGORIES_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: categories_dm_targetsNumber</li><li><strong>dm2</strong>: categories_dm_distractorsNumber</li></ul></div></td>
+<td><img src="redundancy_analysis/Ducks_CATEGORIES_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+</table>
+<h1>Balloons Basic</h1>
+<table>
+<tr><th>Game Mode</th><th>Correlation Matrix</th><th>DM Legend</th><th>PCA Scree Plot</th></tr>
+<tr>
+<td>STANDARD</td>
+<td><img src="redundancy_analysis/Balloons_Basic_STANDARD_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: standard_dm_speed</li><li><strong>dm2</strong>: standard_dm_size</li><li><strong>dm3</strong>: standard_dm_dispersion</li><li><strong>dm4</strong>: standard_dm_distractorsProbability</li><li><strong>dm5</strong>: standard_dm_correctSphereInSequenceProbability</li><li><strong>dm6</strong>: standard_dm_categoriesNumber</li></ul></div></td>
+<td><img src="redundancy_analysis/Balloons_Basic_STANDARD_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+</table>
+<h1>Blobs</h1>
+<table>
+<tr><th>Game Mode</th><th>Correlation Matrix</th><th>DM Legend</th><th>PCA Scree Plot</th></tr>
+<tr>
+<td>STANDARD</td>
+<td><img src="redundancy_analysis/Blobs_STANDARD_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: standard_dm_targetsNumber</li><li><strong>dm2</strong>: standard_dm_distractorsNumber</li><li><strong>dm3</strong>: standard_dm_maxBlobValue</li><li><strong>dm4</strong>: standard_dm_colorMixingNumber</li></ul></div></td>
+<td><img src="redundancy_analysis/Blobs_STANDARD_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+<tr>
+<td>COLOR_MIXING</td>
+<td><img src="redundancy_analysis/Blobs_COLOR_MIXING_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: colorMixing_dm_targetsNumber</li><li><strong>dm2</strong>: colorMixing_dm_distractorsNumber</li><li><strong>dm3</strong>: colorMixing_dm_maxBlobValue</li><li><strong>dm4</strong>: colorMixing_dm_colorMixingNumber</li></ul></div></td>
+<td><img src="redundancy_analysis/Blobs_COLOR_MIXING_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+</table>
+<h1>Shelves</h1>
+<table>
+<tr><th>Game Mode</th><th>Correlation Matrix</th><th>DM Legend</th><th>PCA Scree Plot</th></tr>
+<tr>
+<td>SEQUENCE</td>
+<td><img src="redundancy_analysis/Shelves_SEQUENCE_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: sequence_dm_targetsNumber</li><li><strong>dm2</strong>: sequence_dm_distractorsNumber</li><li><strong>dm3</strong>: sequence_dm_referenceImageDisplayTime</li><li><strong>dm4</strong>: sequence_dm_sequenceDifficulty</li></ul></div></td>
+<td><img src="redundancy_analysis/Shelves_SEQUENCE_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+</table>
+<h1>Buffet</h1>
+<table>
+<tr><th>Game Mode</th><th>Correlation Matrix</th><th>DM Legend</th><th>PCA Scree Plot</th></tr>
+<tr>
+<td>CATEGORIES</td>
+<td><img src="redundancy_analysis/Buffet_CATEGORIES_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: categories_dm_targetsNumber</li><li><strong>dm2</strong>: categories_dm_distractorsNumber</li><li><strong>dm3</strong>: categories_dm_referenceImageDisplayTime</li><li><strong>dm4</strong>: categories_dm_dishSpeed</li><li><strong>dm5</strong>: categories_dm_levelDifficulty</li></ul></div></td>
+<td><img src="redundancy_analysis/Buffet_CATEGORIES_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+</table>
+<h1>Balloons</h1>
+<table>
+<tr><th>Game Mode</th><th>Correlation Matrix</th><th>DM Legend</th><th>PCA Scree Plot</th></tr>
+<tr>
+<td>CATEGORIES</td>
+<td><img src="redundancy_analysis/Balloons_CATEGORIES_correlation.png" alt="Correlation Matrix" width="250"></td>
+<td><div class="dm-legend"><ul><li><strong>dm1</strong>: categories_dm_targetsNumber</li><li><strong>dm2</strong>: categories_dm_finalHeight</li><li><strong>dm3</strong>: categories_dm_timeToDisappear</li><li><strong>dm4</strong>: categories_dm_balloonSpeed</li><li><strong>dm5</strong>: categories_dm_targetBalloonProbability</li></ul></div></td>
+<td><img src="redundancy_analysis/Balloons_CATEGORIES_pca.png" alt="PCA Scree Plot" width="250"></td>
+</tr>
+</table>
+<h1>Tubes</h1>
+<table>
+<tr><th>Game Mode</th><th>Correlation Matrix</th><th>DM Legend</th><th>PCA Scree Plot</th></tr>
+</table>
+</div>
 </body></html>
